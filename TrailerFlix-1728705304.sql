@@ -1,3 +1,5 @@
+CREATE SCHEMA `TrailerFlix` DEFAULT CHARACTER SET utf8;
+use TrailerFlix;
 CREATE TABLE IF NOT EXISTS `categorias` (
 	`id_categoria` int AUTO_INCREMENT NOT NULL,
 	`categoria` varchar(255) NOT NULL,
