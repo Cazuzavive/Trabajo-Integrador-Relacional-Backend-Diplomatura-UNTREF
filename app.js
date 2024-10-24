@@ -7,6 +7,16 @@ console.log(process.env.PRUEBA);
 
 // Middlewares
 app.use(express.json());
+app.use(async (req, res, next) => {
+  try {
+    await db.authenticate();
+    console.log('Conexión establecida con éxito!');
+    next();
+  } catch (error) {
+    res.status(500).json({ error: 'Error en el servidor', description: error.message })
+  }
+})
+// Routes for CRUD
 app.use('/contenido', contenidoRoutes);
 
 // Server

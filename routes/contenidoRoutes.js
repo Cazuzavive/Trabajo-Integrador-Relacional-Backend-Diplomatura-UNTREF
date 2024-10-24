@@ -15,8 +15,9 @@ router.post('/', (req, res) => {
     // Add new content
 });
 
+// Update content by ID
 router.put('/:id', (req, res) => {
-    // Update content by ID
+
 });
 
 router.delete('/:id', (req, res) => {
@@ -24,4 +25,3 @@ router.delete('/:id', (req, res) => {
 });
 
 module.exports = router;
-    
