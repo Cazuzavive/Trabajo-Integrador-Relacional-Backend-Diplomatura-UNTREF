@@ -8,15 +8,15 @@ const ActorContenido = sequelize.define('ActorContenido', {
     actor_id: {
         type: DataTypes.INTEGER,
         references: {
-            model: Actor,
+            model: 'actor',
             key: 'actor_id'
         }
     },
     contenido_id: {
         type: DataTypes.INTEGER,
         references: {
-            model: Film,
-            key: 'film_id'
+            model: 'contenido',
+            key: 'contenido_id'
         }
     }
 }, {

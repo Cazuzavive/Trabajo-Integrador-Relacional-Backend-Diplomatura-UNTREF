@@ -7,6 +7,7 @@ const contenidoRoutes = require('./routes/contenidoRoutes');
 const genRoutes = require('./routes/genRoutes');
 const generoRoutes = require('./routes/generoRoutes');
 const posterRoutes = require('./routes/posterRoutes');
+const actor_contenidoRoutes = require('./routes/actor_contenidoRoutes');
 const { sequelize } = require('./conexion/connection');
 require('dotenv').config();
 require('./models/associations');
@@ -78,6 +79,9 @@ app.use('/genero', generoRoutes);
 
 //Posters
 app.use('/poster', posterRoutes);
+
+//Actor_Contenido
+app.use('/actor_contenido', actor_contenidoRoutes);
 
 // Server
 const PORT = process.env.PORT || 3000;

@@ -1,5 +1,3 @@
-# Bienvenidos a Trailerflix HACER
-GET http://localhost:3000/
 
 ### ACTOR
 # Crear un nuevo actor ANDA
@@ -111,7 +109,7 @@ Content-Type: application/json
     "gen_id": "3"
 }
 
-# Crear muchos contenidos 
+# Crear muchos contenidos ANDA
 POST http://localhost:3000/contenido/agregar-contenidos
 [
         {
@@ -204,9 +202,7 @@ Content-Type: application/json
 
 {
     "image": "./posters/3.jpg",
-    "contenido_id": "Descripción del nuevo poster",
-    "fecha": "2024-10-27",
-    "imagenUrl": "http://example.com/imagen.jpg"
+    "contenido_id": 12,
 }
 
 # Modificar un poster existente
@@ -214,42 +210,23 @@ PUT http://localhost:3000/poster/modificar-poster/1
 Content-Type: application/json
 
 {
-    "titulo": "Poster Modificado",
-    "descripcion": "Descripción del poster modificado",
-    "fecha": "2024-10-28",
-    "imagenUrl": "http://example.com/imagen-modificada.jpg"
+    "image": "./posters/6.jpg",
+    "contenido_id": 12,
 }
 
 # Borrar un poster por ID
 DELETE http://localhost:3000/poster/borrar-poster/1
 Accept: application/json
 
-###
+### ACTOR_CONTENIDO
+# Traer todas las películas de un actor
+GET http://localhost:3000/actor_contenido/actor/:actorId/contenidos
 
+# Traer todos los actores de una pelicula
+GET http://localhost:3000/actor_contenido//contenido/:contenidoId/actores
 
-
-# Traer todas las pelis y sus actores 
-GET http://localhost:3000/contenidos/actor
-
-###
-
-
-
-### Pedidos para categorias
-
-#Traer todas las categorias
-
-# Crear una categoria
-POST http://localhost:3000/categoria
-Content-Type: application/json
-
-{
-  "categoria": "pelicula"
-}
-
-#Modificar una categoria
-
-#Borrar una categoria
+#Asociar un contenido a un actor
+POST 
 
 
 
