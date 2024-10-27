@@ -5,7 +5,8 @@ const actorRoutes = require('./routes/actorRoutes');
 const categoriaRoutes = require('./routes/categoriaRoutes');
 const contenidoRoutes = require('./routes/contenidoRoutes');
 const genRoutes = require('./routes/genRoutes');
-const generoRoutes = require('./routes/generoRoutes')
+const generoRoutes = require('./routes/generoRoutes');
+const posterRoutes = require('./routes/posterRoutes');
 const { sequelize } = require('./conexion/connection');
 require('dotenv').config();
 
@@ -56,26 +57,27 @@ app.use('/actor', (req, res, next) => {
 });
 
 // Rutas del CRUD //
-//Rutas actor
+//Actor
 app.use('/actor', actorRoutes);
 
-//Rutas categoria
+//Categorias
 app.use('/categoria', categoriaRoutes);
 
-//Rutas gen
+//Gen
 app.use('/gen', genRoutes);
 
-//Rutas contenido
+//Contenidos
 app.use('/contenido', contenidoRoutes);
 
-//Rutas genero
+//Genero
 app.use('/genero', generoRoutes);
 
-//Rutas genero_contenido
+//genero_contenido
 
-//Rutas actor_contenido
+//actor_contenido
 
-//Rutas poster
+//Posters
+app.use('/poster', posterRoutes);
 
 // Server
 const PORT = process.env.PORT || 3000;

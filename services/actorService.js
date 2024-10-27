@@ -21,14 +21,13 @@ const actorService = {
     },
 
     borrarActor: async (id) => {
-        const categoria = await Categoria.findByPk(id);
-        if (categoria) {
-            await categoria.destroy();
+        const actor = await Actor.findByPk(id);
+        if (actor) {
+            await actor.destroy();
             return true;
         }
         return false;
     }
-
 };
 
 module.exports = actorService;

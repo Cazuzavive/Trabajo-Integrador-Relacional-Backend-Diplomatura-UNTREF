@@ -2,10 +2,11 @@ const contenidoService = require("../services/contenidoService.js");
 
 const getAllContenidos = async (req, res) => {
     try {
-        const contenido = await contenidoService.getAllContenido();
+        const contenido = await contenidoService.getAllContenidos();
         res.status(200).json(contenido);
     } catch (error) {
-        res.status(500).json({ error: 'Error en el servidor' }); // Eliminado el 400 aquí
+        console.error('Error al obtener contenidos:', error);
+        res.status(500).json({ error: 'Error en el servidor' });
     }
 };
 
@@ -27,9 +28,10 @@ const createContenido = async (req, res) => {
         const newContenido = await contenidoService.createContenido(req.body);
         res.status(201).json(newContenido);
     } catch (error) {
-        res.status(500).json({ error: 'Error en el servidor' }); // Cambiado a solo 500
+        res.status(500).json({ error: 'Error en el servidor' });
     }
 };
+
 
 const updateContenido = async (req, res) => {
     try {
@@ -58,9 +60,10 @@ const deleteContenido = async (req, res) => {
 };
 
 module.exports = {
-    getAllContenidos, // Asegúrate de que se usa el nombre correcto
+    getAllContenidos,
     getContenidoById,
     createContenido,
+
     updateContenido,
     deleteContenido
 };

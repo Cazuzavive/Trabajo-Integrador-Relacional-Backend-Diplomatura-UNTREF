@@ -1,8 +1,8 @@
 const generoService = require("../services/generoService");
 
-const getAllGenero = async (req, res) => {
+const getAllGeneros = async (req, res) => {
     try {
-        const genero = await generoService.getAllGenero();
+        const genero = await generoService.getAllGeneros();
         res.status(200).json(genero);
     } catch (error) {
         res.status(400).json({ error: "Ocurrio un error al buscar los Generos" });
@@ -60,7 +60,7 @@ const deleteGenero = async (req, res) => {
 };
 
 module.exports = {
-    getAllGenero,
+    getAllGeneros,
     getGeneroById,
     createGenero,
     updateGenero,

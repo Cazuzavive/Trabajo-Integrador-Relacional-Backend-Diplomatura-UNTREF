@@ -1,6 +1,6 @@
 const Contenido = require('../models/contenido');
 
-const getAllContenido = async () => {
+const getAllContenidos = async () => {
     return await Contenido.findAll()
 };
 
@@ -11,6 +11,8 @@ const getContenidoById = async (id) => {
 const createContenido = async (data) => {
     return await Contenido.create(data);
 };
+
+
 
 const updateContenido = async (id, data) => {
     const contenido = await Contenido.findByPk(id);
@@ -30,9 +32,10 @@ const deleteContenido = async (id) => {
 };
 
 module.exports = {
-    getAllContenido,
+    getAllContenidos,
     getContenidoById,
     createContenido,
+
     updateContenido,
     deleteContenido
 }
