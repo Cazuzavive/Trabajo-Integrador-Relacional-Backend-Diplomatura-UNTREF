@@ -1,6 +1,6 @@
 const { DataTypes } = require('sequelize');
 const { sequelize } = require('../conexion/connection');
-const Contenido = require('./contenido')
+
 
 const Poster = sequelize.define('Poster', {
     poster_id: {
@@ -15,7 +15,7 @@ const Poster = sequelize.define('Poster', {
     contenido_id: {
         type: DataTypes.INTEGER,
         references: {
-            model: 'Contenido',
+            model: 'contenido',
             key: 'contenido_id'
         }
     }
@@ -25,7 +25,6 @@ const Poster = sequelize.define('Poster', {
     tableName: 'poster',
     timestamps: false
 })
-//Definir relaciones
-Poster.hasOne(Contenido)
 
-module.exports = Poster
+
+module.exports = Poster;

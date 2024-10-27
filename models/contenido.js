@@ -2,6 +2,7 @@ const { DataTypes } = require('sequelize');
 const { sequelize } = require('../conexion/connection');
 const Categoria = require('./categoria');
 const Gen = require('./gen');
+const Poster = require('./poster')
 
 const Contenido = sequelize.define('Contenido', {
     contenido_id: {
@@ -49,8 +50,9 @@ const Contenido = sequelize.define('Contenido', {
     timestamps: false
 });
 
-// Definir relaciones
+// Relaciones
 Contenido.belongsTo(Categoria);
 Contenido.belongsTo(Gen);
+
 
 module.exports = Contenido;

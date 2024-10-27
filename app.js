@@ -9,7 +9,7 @@ const generoRoutes = require('./routes/generoRoutes');
 const posterRoutes = require('./routes/posterRoutes');
 const { sequelize } = require('./conexion/connection');
 require('dotenv').config();
-
+require('./models/associations');
 app.use(express.json());
 
 // Función para verificar la base de datos
