@@ -6,7 +6,7 @@ const contenidoController = require('../controllers/contenidoController');
 router.get("/listar-contenidos", contenidoController.getAllContenidos);
 router.get("/contenido/:id", contenidoController.getContenidoById);
 router.post("/agregar-contenido", contenidoController.createContenido);
-
+router.post('/agregar-contenidos', contenidoController.crearContenidos);
 router.put("/modificar-contenido/:id", contenidoController.updateContenido);
 router.delete("/borrar-contenido/:id", contenidoController.deleteContenido);
 

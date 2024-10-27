@@ -32,6 +32,30 @@ const createContenido = async (req, res) => {
     }
 };
 
+const crearContenidos = async (req, res) => {
+    const contenidos = req.body; // Espera un arreglo de objetos de contenido
+
+    // Validar que se reciba un arreglo y que cada objeto tenga los campos requeridos
+    if (!Array.isArray(contenidos) || contenidos.some(contenido =>
+        !contenido.titulo ||
+        !contenido.resumen ||
+        !contenido.busqueda ||
+        !contenido.trailer ||
+        !contenido.categoria_id ||
+        !contenido.duracion ||
+        !contenido.gen_id
+    )) {
+        return res.status(400).json({ error: 'Cada contenido debe tener todos los campos requeridos' });
+    }
+
+    try {
+        const nuevosContenidos = await Promise.all(contenidos.map(contenido => contenidoService.createContenido(contenido)));
+        res.status(201).json(nuevosContenidos);
+    } catch (error) {
+        console.error('Error al agregar contenidos:', error);
+        res.status(500).json({ error: 'Error en el servidor' });
+    }
+};
 
 const updateContenido = async (req, res) => {
     try {
@@ -63,7 +87,7 @@ module.exports = {
     getAllContenidos,
     getContenidoById,
     createContenido,
-
+    crearContenidos,
     updateContenido,
     deleteContenido
 };

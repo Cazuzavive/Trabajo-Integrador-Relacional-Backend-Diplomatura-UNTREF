@@ -8,15 +8,16 @@ const Gen = sequelize.define('Gen', {
         autoIncrement: true
     },
     gen: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-
-
+        type: DataTypes.STRING(255), // Definir longitud máxima
+        allowNull: false,
+        validate: {
+            notEmpty: true, // No puede ser vacío
+            len: [1, 255] // Longitud mínima y máxima
+        }
+    }
 }, {
     tableName: 'gen',
     timestamps: false
-})
+});
 
-
-module.exports = Gen
+module.exports = Gen;

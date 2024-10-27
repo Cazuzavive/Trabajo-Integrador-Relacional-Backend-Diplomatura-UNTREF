@@ -35,7 +35,6 @@ module.exports = {
     getAllContenidos,
     getContenidoById,
     createContenido,
-
     updateContenido,
     deleteContenido
 }

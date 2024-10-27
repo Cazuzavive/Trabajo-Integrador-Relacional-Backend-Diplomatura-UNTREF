@@ -114,158 +114,27 @@ Content-Type: application/json
 # Crear muchos contenidos 
 POST http://localhost:3000/contenido/agregar-contenidos
 [
-    {
-        "titulo": "The Mandalorian",
-        "resumen": "Ambientada tras la caída del Imperio y antes de la aparición de la Primera Orden, la Serie sigue los pasos de un pistolero solitario en las aventuras que protagoniza en los confines de la galaxia, donde no alcanza la autoridad de la Nueva República.",
-        "busqueda": "The Mandalorian, Sci-Fi, Fantasía, Suspenso, Pedro Pascal, Carl Weathers, Misty Rosas, Chris Bartlett, Rio Hackford, Giancarlo Esposito",
-        "trailer": "https://www.youtube.com/embed/aOC8E8z_ifw",
-        "categoria_id": "1",
-        "temporadas": "2",
-        "duracion": "N/A",
-        "gen_id": "3"
-    },
-    {
+        {
         "titulo": "The Umbrella Academy",
         "resumen": "La muerte de su padre reúne a unos hermanos distanciados y con extraordinarios poderes que descubren impactantes secretos y una amenaza que se cierne sobre la humanidad.",
         "busqueda": "The Umbrella Academy, Sci-Fi, Fantasía, Drama, Tom Hopper, David Castañeda, Emmy Raver-Lampman, Robert Sheehan, Aidan Gallagher, Elliot Page",
         "trailer": "https://www.youtube.com/embed/KHucKOK-Vik",
-        "categoria_id": "1",
-        "temporadas": "1",
-        "duracion": "N/A",
-        "gen_id": "4"
+        "categoria_id": 1,
+        "temporadas": 1,
+        "duracion": null,
+        "gen_id": 4
     },
     {
         "titulo": "Gambito de Dama",
         "resumen": "En los cincuenta, una joven de un orfanato descubre que tiene un increíble don para el ajedrez y recorre el arduo camino a la fama mientras lucha contra las adicciones.",
         "busqueda": "Gambito de Dama, Drama, Ficción, Sucesos, Anya Taylor-Joy, Thomas Brodie-Sangster, Harry Melling, Moses Ingram, Chloe Pirrie, Janina Elkin",
         "trailer": "https://www.youtube.com/embed/lbleRbyGKL4",
-        "categoria_id": "1",
-        "temporadas": "1",
-        "duracion": "N/A",
-        "gen_id": "4"
-    },
-    {
-        "titulo": "Riverdale",
-        "resumen": "El paso a la edad adulta incluye sexo, romance, escuela y familia. Para Archie y sus amigos, también hay misterios oscuros.",
-        "busqueda": "Riverdale, Drama, Misterio, Ficción, Lili Reinhart, Casey Cott, Camila Mendes, Marisol Nichols, Madelaine Petsch, Mädchen Amick",
-        "trailer": "https://www.youtube.com/embed/HxtLlByaYTc",
-        "categoria_id": "1",
-        "temporadas": "5",
-        "duracion": "N/A",
-        "gen_id": "4"
-    },
-    {
-        "titulo": "The Crown",
-        "resumen": "Este drama narra las rivalidades políticas y el romance de la reina Isabel II, así como los sucesos que moldearon la segunda mitad del siglo XX.",
-        "busqueda": "The Crown, Drama, Suceso Real, Claire Fox, Olivia Colman, Matt Smith, Tobias Menzies, Vanesa Kirby, Helena Bonham Carter",
-        "trailer": "https://www.youtube.com/embed/JWtnJjn6ng0",
-        "categoria_id": "1",
-        "temporadas": "4",
-        "duracion": "N/A",
-        "gen_id": "6"
-    },
-    {
-        "titulo": "Enola Holmes",
-        "resumen": "La hermana menor de Sherlock, descubre que su madre ha desaparecido y se dispone a encontrarla.",
-        "busqueda": "Enola Holmes, Ficción, Drama, Misterio, Millie Bobby Brown, Henry Cavill, Sam Claflin, Helena Bonham Carter, Louis Partridge, Adeel Akhtar",
-        "trailer": "https://www.youtube.com/embed/3t1g2pa355k",
-        "categoria_id": "2",
-        "temporadas": "N/A",
-        "duracion": "97",
-        "gen_id": "4"
-    },
-    {
-        "titulo": "Guasón",
-        "resumen": "Arthur Fleck es un hombre ignorado por la sociedad, cuya motivación en la vida es hacer reír. Pero una serie de trágicos acontecimientos le llevarán a ver el mundo de otra forma.",
-        "busqueda": "Guasón, The Joker, Crimen, Suspenso, Drama, DC Comics, Joaquin Phoenix, Robert De Niro, Zazie Beetz, Frances Conroy, Brett Cullen, Shea Whigham",
-        "trailer": "https://www.youtube.com/embed/zAGVQLHvwOY",
-        "categoria_id": "2",
-        "temporadas": "N/A",
-        "duracion": "97",
-        "gen_id": "7"
-    },
-    {
-        "titulo": "Avengers: End Game",
-        "resumen": "Después de los devastadores eventos de los Vengadores: Infinity War, el universo está en ruinas. Los Vengadores se reúnen una vez más para revertir las acciones de Thanos.",
-        "busqueda": "Vengadores, Los vengadores, Marvel, The Avengers: End Game, Aventura, Sci-Fi, Acción, Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth, Scarlett Johansson, Jeremy Renner",
-        "trailer": "https://www.youtube.com/embed/TcMBFSGVi1c",
-        "categoria_id": "2",
-        "temporadas": "N/A",
-        "duracion": "97",
-        "gen_id": "3"
-    },
-    {
-        "titulo": "Juego de tronos",
-        "resumen": "En un mundo fantástico y en un contexto medieval, varias familias se disputan el poder para dominar el territorio ficticio de Poniente y tomar el control de los Siete Reinos.",
-        "busqueda": "Juego de tronos, Game of Thrones, Aventura, Fantasía, Drama, Emilia Clarke, Lena Headey, Sophie Turner, Kit Harington, Peter Dinklage, Nikolaj Coster-Waldau",
-        "trailer": "https://www.youtube.com/embed/KPLWWIOCOOQ",
-        "categoria_id": "1",
-        "temporadas": "8",
-        "duracion": "N/A",
-        "gen_id": "5"
-    },
-    {
-        "titulo": "The Flash",
-        "resumen": "Sigue las veloces aventuras de Barry Allen, un joven con el deseo de ayudar a los demás que se encuentra cargado de un increíble poder para moverse a increíbles velocidades.",
-        "busqueda": "The Flash, DC Comics, Sci-Fi, Fantasía, Acción, Grant Gustin, Carlos Valdes, Danielle Panabaker, Candice Patton, Jesse L. Martin, Tom Cavanagh",
-        "trailer": "https://www.youtube.com/embed/Yj0l7iGKh8g",
-        "categoria_id": "1",
-        "temporadas": "6",
-        "duracion": "N/A",
-        "gen_id": "3"
-    },
-    {
-        "titulo": "The Big Bang Theory",
-        "resumen": "Leonard y Sheldon son dos físicos que comparten trabajo y apartamento, enfrentándose a situaciones cómicas con su nueva vecina Penny.",
-        "busqueda": "The Big Bang Theory, La teoría del Big Bang, Comedia, Fantasía, Ficción, Jim Parsons, Johnny Galecki, Kaley Cuoco, Simon Helberg, Kunal Nayyar, Melissa Rauch, Mayim Bialik",
-        "trailer": "https://www.youtube.com/embed/WBb3fojgW0Q",
-        "categoria_id": "1",
-        "temporadas": "12",
-        "duracion": "N/A",
-        "gen_id": "9"
-    },
-    {
-        "titulo": "Friends",
-        "resumen": "'Friends' narra las aventuras y desventuras de seis jóvenes de Nueva York que forman una unida pandilla de amigos que viven en Manhattan.",
-        "busqueda": "Friends, Amigos, Comedia, Familia, Drama, Sitcom, Jennifer Aniston, Courteney Cox, Lisa Kudrow, David Schwimmer, Matthew Perry, Matt LeBlanc",
-        "trailer": "https://www.youtube.com/embed/ekYGfU0XIx0",
-        "categoria_id": "1",
-        "temporadas": "10",
-        "duracion": "N/A",
-        "gen_id": "9"
-    },
-    {
-        "titulo": "Anne with an 'E'",
-        "resumen": "Anne Shirley es una niña huérfana que vive en un pequeño pueblo y transforma su vida gracias a su fuerte personalidad, intelecto e imaginación.",
-        "busqueda": "Anne with an 'E', Drama, Familia, Western, Amybeth McNulty, Geraldine James, R. H. Thomson, Corrine Koslo, Dalila Bela, Lucas Jade Zumann",
-        "trailer": "https://www.youtube.com/embed/M4T-_aB8smU",
-        "categoria_id": "1",
-        "temporadas": "3",
-        "duracion": "N/A",
-        "gen_id": "4"
-    },
-    {
-        "titulo": "The Good Place",
-        "resumen": "Tras su muerte, Eleanor Shellstrop descubre que está en el 'Buen Lugar', un paraíso que resulta no ser tan perfecto como ella creía.",
-        "busqueda": "The Good Place, Comedia, Fantasía, Ficción, Kristen Bell, Ted Danson, William Jackson Harper, Jameela Jamil, D'Arcy Carden, Manny Jacinto",
-        "trailer": "https://www.youtube.com/embed/bYzgr1u2x8I",
-        "categoria_id": "1",
-        "temporadas": "4",
-        "duracion": "N/A",
-        "gen_id": "9"
-    },
-    {
-        "titulo": "Breaking Bad",
-        "resumen": "Walter White es un profesor de química que se convierte en un fabricante de metanfetaminas tras ser diagnosticado con cáncer.",
-        "busqueda": "Breaking Bad, Drama, Crimen, Acción, Bryan Cranston, Aaron Paul, Anna Gunn, Dean Norris, Betsy Brandt, RJ Mitte",
-        "trailer": "https://www.youtube.com/embed/HhesaQXLuRY",
-        "categoria_id": "1",
-        "temporadas": "5",
-        "duracion": "N/A",
-        "gen_id": "4"
+        "categoria_id": 1,
+        "temporadas": 1,
+        "duracion": null,
+        "gen_id": 4
     }
 ]
-
 
 
 # Obtener un contenido por ID ANDA

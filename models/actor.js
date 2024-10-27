@@ -8,16 +8,24 @@ const Actor = sequelize.define('Actor', {
         autoIncrement: true
     },
     nombre: {
-        type: DataTypes.STRING,
-        allowNull: false
+        type: DataTypes.STRING(255), // Definir longitud máxima
+        allowNull: false,
+        validate: {
+            notEmpty: true, // No puede ser vacío
+            len: [1, 255] // Longitud mínima y máxima
+        }
     },
     apellido: {
-        type: DataTypes.STRING,
-        allowNull: false
+        type: DataTypes.STRING(255), // Definir longitud máxima
+        allowNull: false,
+        validate: {
+            notEmpty: true, // No puede ser vacío
+            len: [1, 255] // Longitud mínima y máxima
+        }
     }
 }, {
     tableName: 'actor',
     timestamps: false
-})
+});
 
-module.exports = Actor
+module.exports = Actor;

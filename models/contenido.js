@@ -2,7 +2,6 @@ const { DataTypes } = require('sequelize');
 const { sequelize } = require('../conexion/connection');
 const Categoria = require('./categoria');
 const Gen = require('./gen');
-const Poster = require('./poster')
 
 const Contenido = sequelize.define('Contenido', {
     contenido_id: {
@@ -12,37 +11,67 @@ const Contenido = sequelize.define('Contenido', {
     },
     titulo: {
         type: DataTypes.STRING(100),
-        allowNull: false
+        allowNull: false,
+        validate: {
+            notEmpty: true, // No puede ser vacío
+            len: [1, 100] // Longitud mínima y máxima
+        }
     },
     resumen: {
-        type: DataTypes.TEXT
+        type: DataTypes.TEXT,
+        allowNull: true, // Permite nulo
     },
     busqueda: {
         type: DataTypes.STRING(250),
+        allowNull: true,
+        validate: {
+            len: [0, 250] // Longitud máxima
+        }
     },
     trailer: {
         type: DataTypes.STRING(250),
+        allowNull: true,
+        validate: {
+            isUrl: true, // Verificar que sea una URL válida
+            len: [0, 250] // Longitud máxima
+        }
     },
     categoria_id: {
         type: DataTypes.INTEGER,
         references: {
             model: 'categoria',
             key: 'categoria_id'
+        },
+        allowNull: false, // Requiere un valor
+        validate: {
+            isInt: true // Debe ser un número entero
         }
     },
     duracion: {
         type: DataTypes.INTEGER,
-        allowNull: true
+        allowNull: true,
+        validate: {
+            isInt: true, // Debe ser un número entero
+            min: 0 // No puede ser negativo
+        }
     },
     temporadas: {
         type: DataTypes.INTEGER,
-        allowNull: true
+        allowNull: true,
+        validate: {
+            isInt: true, // Debe ser un número entero
+            min: 0 // No puede ser negativo
+        }
     },
     gen_id: {
         type: DataTypes.INTEGER,
         references: {
             model: 'gen',
             key: 'gen_id'
+        },
+        allowNull: false, // Requiere un valor
+        validate: {
+            isInt: true // Debe ser un número entero
         }
     }
 }, {
@@ -53,6 +82,5 @@ const Contenido = sequelize.define('Contenido', {
 // Relaciones
 Contenido.belongsTo(Categoria);
 Contenido.belongsTo(Gen);
-
 
 module.exports = Contenido;

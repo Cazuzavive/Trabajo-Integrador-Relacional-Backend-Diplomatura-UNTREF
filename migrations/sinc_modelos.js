@@ -1,17 +1,17 @@
 const express = require('express');
 const app = express();
-const { sequelize } = require('./conexion/connection');
+const { sequelize } = require('../conexion/connection');
 require('dotenv').config();
 
 //Importar los modelos
-require('./models/actor');
-require('./models/categoria');
-require('./models/gen');
-require('./models/contenido');
-require('./models/genero');
-require('./models/genero_contenido');
-require('./models/actor_contenido');
-require('./models/poster');
+require('../models/actor');
+require('../models/categoria');
+require('../models/gen');
+require('../models/contenido');
+require('../models/genero');
+require('../models/genero_contenido');
+require('../models/actor_contenido');
+require('../models/poster');
 
 // Prueba de conexión a la base de datos
 console.log(process.env.PRUEBA);

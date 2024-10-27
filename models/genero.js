@@ -8,12 +8,16 @@ const Genero = sequelize.define('Genero', {
         autoIncrement: true
     },
     genero: {
-        type: DataTypes.STRING,
-        allowNull: false
+        type: DataTypes.STRING(255), // Definir longitud máxima
+        allowNull: false,
+        validate: {
+            notEmpty: true, // No puede ser vacío
+            len: [1, 255] // Longitud mínima y máxima
+        }
     }
 }, {
     tableName: 'genero',
     timestamps: false
-})
+});
 
-module.exports = Genero
+module.exports = Genero;
