@@ -1,5 +1,5 @@
-const { DataTypes } = require('sequelize')
-const sequelize = require('../conexion/database')
+const { DataTypes } = require('sequelize');
+const { sequelize } = require('../conexion/connection');
 
 const Actor = sequelize.define('Actor', {
     actor_id: {

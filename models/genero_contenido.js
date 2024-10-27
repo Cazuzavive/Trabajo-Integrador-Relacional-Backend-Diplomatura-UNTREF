@@ -1,9 +1,8 @@
-const { DataTypes } = require('sequelize')
-const sequelize = require('../config/database')
-const Actor = require('./genero')
-const Film = require('./contenido')
-const Contenido = require('./contenido')
+const { DataTypes } = require('sequelize');
+const { sequelize } = require('../conexion/connection');
 const Genero = require('./genero')
+const Contenido = require('./contenido')
+
 
 const GeneroContenido = sequelize.define('GeneroContenido', {
     genero_id: {

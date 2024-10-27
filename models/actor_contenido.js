@@ -1,5 +1,5 @@
-const { DataTypes } = require('sequelize')
-const sequelize = require('../config/database')
+const { DataTypes } = require('sequelize');
+const { sequelize } = require('../conexion/connection');
 const Actor = require('./actor')
 const Film = require('./contenido')
 const Contenido = require('./contenido')

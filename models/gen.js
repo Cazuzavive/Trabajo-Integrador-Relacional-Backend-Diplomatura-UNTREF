@@ -1,5 +1,5 @@
-const { DataTypes } = require('sequelize')
-const sequelize = require('../conexion/database')
+const { DataTypes } = require('sequelize');
+const { sequelize } = require('../conexion/connection');
 
 const Gen = sequelize.define('Gen', {
     gen_id: {
@@ -11,7 +11,7 @@ const Gen = sequelize.define('Gen', {
         type: DataTypes.STRING,
         allowNull: false
     },
-    
+
 
 }, {
     tableName: 'gen',

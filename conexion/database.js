@@ -3,7 +3,7 @@ const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'fiorell0',
-    database: 'trailerflix'
+    database: 'trailer_flix_nueva'
 });
 
 connection.connect((err) => {
@@ -15,4 +15,3 @@ connection.connect((err) => {
 });
 
 module.exports = connection;
-    

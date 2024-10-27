@@ -1,7 +1,7 @@
-const { DataTypes } = require('sequelize')
-const sequelize = require('../conexion/database')
-const Categoria = require('./categoria')
-const Gen = require('./gen')
+const { DataTypes } = require('sequelize');
+const { sequelize } = require('../conexion/connection');
+const Categoria = require('./categoria');
+const Gen = require('./gen');
 
 const Contenido = sequelize.define('Contenido', {
     contenido_id: {
@@ -10,17 +10,17 @@ const Contenido = sequelize.define('Contenido', {
         autoIncrement: true
     },
     titulo: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(100),
         allowNull: false
     },
     resumen: {
         type: DataTypes.TEXT
     },
     busqueda: {
-        type: DataTypes.VARCHAR(250),
+        type: DataTypes.STRING(250),
     },
     trailer: {
-        type: DataTypes.VARCHAR(250),
+        type: DataTypes.STRING(250),
     },
     categoria_id: {
         type: DataTypes.INTEGER,
@@ -31,9 +31,11 @@ const Contenido = sequelize.define('Contenido', {
     },
     duracion: {
         type: DataTypes.INTEGER,
+        allowNull: true
     },
     temporadas: {
         type: DataTypes.INTEGER,
+        allowNull: true
     },
     gen_id: {
         type: DataTypes.INTEGER,
@@ -45,12 +47,10 @@ const Contenido = sequelize.define('Contenido', {
 }, {
     tableName: 'contenido',
     timestamps: false
-})
+});
 
-//Definir relaciones
-Contenido.HasOne(Categoria)
+// Definir relaciones
+Contenido.belongsTo(Categoria);
+Contenido.belongsTo(Gen);
 
-Contenido.HasOne(Gen)
-
-
-module.exports = Contenido
+module.exports = Contenido;

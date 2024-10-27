@@ -1,5 +1,5 @@
-const { DataTypes } = require('sequelize')
-const sequelize = require('../conexion/database')
+const { DataTypes } = require('sequelize');
+const { sequelize } = require('../conexion/connection');
 
 const Genero = sequelize.define('Genero', {
     genero_id: {
@@ -12,7 +12,7 @@ const Genero = sequelize.define('Genero', {
         allowNull: false
     }
 }, {
-    tableName: 'agenero',
+    tableName: 'genero',
     timestamps: false
 })
 

@@ -1,27 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../conexion/database');
+const contenidoController = require('../controllers/contenidoController');
 
-// Routes for CRUD
-router.get('/', (req, res) => {
-    // Get all content
-});
-
-router.get('/:id', (req, res) => {
-    // Get content by ID
-});
-
-router.post('/', (req, res) => {
-    // Add new content
-});
-
-// Update content by ID
-router.put('/:id', (req, res) => {
-
-});
-
-router.delete('/:id', (req, res) => {
-    // Delete content by ID
-});
+// Rutas contenido
+router.get("/listar-contenidos", contenidoController.getAllContenidos);
+router.get("/contenido/:id", contenidoController.getContenidoById);
+router.post("/agregar-contenido", contenidoController.createContenido);
+router.put("/modificar-contenido/:id", contenidoController.updateContenido);
+router.delete("/borrar-contenido/:id", contenidoController.deleteContenido);
 
 module.exports = router;

@@ -1,76 +1,185 @@
-# Hola mundo
+# Bienvenidos a Trailerflix
 GET http://localhost:3000/
 
-###
-
-# Traer todos los actores
-GET http://localhost:3000/actors
-
-###
-
-# Crear un actor
-POST http://localhost:3000/actors
+### ACTOR
+# Crear un nuevo actor
+POST http://localhost:3000/actor/agregar-actor
 Content-Type: application/json
 
 {
-  "first_name": "Tom",
-  "last_name": "Hanks"
+    "nombre": "Juan",
+    "apellido": "Perez"
 }
 
-###
+# Obtener un actor por ID
+GET http://localhost:3000/actor/1
 
-# Traer todos los peliculones
-GET http://localhost:3000/films
-
-###
-
-# Crear una peli
-POST http://localhost:3000/films
-Content-Type: application/json
-
-{
-  "title": "Forrest Gump", 
-  "description": "Forrest Gump, un joven sureño, tenaz e inocente, es protagonista de acontecimientos cruciales en la historia de los Estados Unidos.", 
-  "release_year": 1994
-}
-
-###
-
-# Asociar actor a una peli
-POST http://localhost:3000/actors/239/films/1028
-
-###
-
-# Traer todos los actores y sus pelis
-GET http://localhost:3000/actors/films
-
-###
-
-# Traer todas las pelis y sus actores 
-GET http://localhost:3000/films/actors
-
-###
-
-# Traer el actor y sus pelis
-GET http://localhost:3000/actors/3/films
-
-###
-
-# Crear un actor
-POST http://localhost:3000/actors/bulk
+# Crear múltiples actores ANDA
+POST http://localhost:3000/actor/agregar-actores
 Content-Type: application/json
 
 [
-  {
-  "first_name": "Scarlett",
-  "last_name": "Joganson"
-  },
-  {
-    "first_name": "Ricardo ",
-    "last_name": "Darin"
-  },
-  {
-    "first_name": "Guillermo",
-    "last_name": "Francella"
-  }
+    { "nombre": "Ana", "apellido": "Gomez" },
+    { "nombre": "Luis", "apellido": "Lopez" }
 ]
+
+# Listar todos los actores ANDA
+GET http://localhost:3000/actor/listar-actores
+
+# Actualizar un actor por ID
+PUT http://localhost:3000/actor/modificar-actor/1
+Content-Type: application/json
+
+{
+    "nombre": "Carlos",
+    "apellido": "Garcia"
+}
+
+# Borrar un actor por ID
+DELETE http://localhost:3000/actor/borrar-actor/1
+
+---
+
+### CATEGORÍA
+# Crear una nueva categoría
+POST http://localhost:3000/agregar-categoria
+Content-Type: application/json
+
+{
+    "categoria": "pelicula-2"
+}
+
+# Obtener una categoría por ID
+GET http://localhost:3000/categoria/1
+
+# Listar todas las categorías
+GET http://localhost:3000/listar-categorias
+
+# Actualizar una categoría por ID
+PUT http://localhost:3000/modificar-categoria/1
+Content-Type: application/json
+
+{
+    "nombre": "Drama"
+}
+
+# Borrar una categoría por ID
+DELETE http://localhost:3000/borrar-categoria/1
+
+---
+
+### GEN
+# Crear un nuevo gen
+POST http://localhost:3000/agregar-gen
+Content-Type: application/json
+
+{
+    "nombre": "Gen A"
+}
+
+# Obtener un gen por ID
+GET http://localhost:3000/gen/1
+
+# Listar todos los gen
+GET http://localhost:3000/listar-gen
+
+# Actualizar un gen por ID
+PUT http://localhost:3000/modificar-gen/1
+Content-Type: application/json
+
+{
+    "nombre": "Gen B"
+}
+
+# Borrar un gen por ID
+DELETE http://localhost:3000/borrar-gen/1
+
+---
+
+### CONTENIDO
+# Crear un nuevo contenido
+POST http://localhost:3000/contenido/agregar-contenido
+Content-Type: application/json
+
+{
+    "titulo": "Película X",
+    "resumen": "Descripción de la película",
+    "busqueda": "Pirulitp se encontro un claivto",
+    "trailer": "https://www.youtube.com/watch?v=e2E1aBQ5yA0",
+    "categoria_id": "2",
+    "duracion": "160",
+    "gen": "3"
+}
+
+# Obtener un contenido por ID
+GET http://localhost:3000/contenido/1
+
+# Listar todos los contenidos
+GET http://localhost:3000/listar-contenidos
+
+# Actualizar un contenido por ID
+PUT http://localhost:3000/modificar-contenido/1
+Content-Type: application/json
+
+{
+    "titulo": "Película Y",
+    "descripcion": "Descripción actualizada"
+}
+
+# Borrar un contenido por ID
+DELETE http://localhost:3000/borrar-contenido/1
+
+---
+
+### GÉNERO
+# Crear un nuevo género
+POST http://localhost:3000/agregar-genero
+Content-Type: application/json
+
+{
+    "nombre": "Acción"
+}
+
+# Obtener un género por ID
+GET http://localhost:3000/genero/1
+
+# Listar todos los géneros
+GET http://localhost:3000/listar-generos
+
+# Actualizar un género por ID
+PUT http://localhost:3000/modificar-genero/1
+Content-Type: application/json
+
+{
+    "nombre": "Aventura"
+}
+
+# Borrar un género por ID
+DELETE http://localhost:3000/borrar-genero/1
+
+
+# Traer todas las pelis y sus actores 
+GET http://localhost:3000/contenidos/actor
+
+###
+
+
+
+### Pedidos para categorias
+
+#Traer todas las categorias
+
+# Crear una categoria
+POST http://localhost:3000/categoria
+Content-Type: application/json
+
+{
+  "categoria": "pelicula"
+}
+
+#Modificar una categoria
+
+#Borrar una categoria
+
+
+

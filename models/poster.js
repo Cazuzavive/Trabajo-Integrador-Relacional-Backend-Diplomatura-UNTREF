@@ -1,5 +1,5 @@
-const { DataTypes } = require('sequelize')
-const sequelize = require('../conexion/database')
+const { DataTypes } = require('sequelize');
+const { sequelize } = require('../conexion/connection');
 const Contenido = require('./contenido')
 
 const Poster = sequelize.define('Poster', {
@@ -26,6 +26,6 @@ const Poster = sequelize.define('Poster', {
     timestamps: false
 })
 //Definir relaciones
-Poster.HasOne(Contenido)
+Poster.hasOne(Contenido)
 
 module.exports = Poster
