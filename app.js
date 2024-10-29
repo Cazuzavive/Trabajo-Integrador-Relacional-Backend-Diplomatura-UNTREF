@@ -11,7 +11,12 @@ const actor_contenidoRoutes = require('./routes/actor_contenidoRoutes');
 const { sequelize } = require('./conexion/connection');
 require('dotenv').config();
 require('./models/associations');
+const { swaggerUi, swaggerDocs } = require('./swaggerConfig')
+
 app.use(express.json());
+
+// Swagger Config
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs))
 
 // Función para verificar la base de datos
 const checkDatabase = async () => {
@@ -82,6 +87,10 @@ app.use('/poster', posterRoutes);
 
 //Actor_Contenido
 app.use('/actor_contenido', actor_contenidoRoutes);
+
+app.get('/', (req, res) => {
+  res.send('Bienvenidos a trailer_flix_nueva !')
+})
 
 // Server
 const PORT = process.env.PORT || 3000;
