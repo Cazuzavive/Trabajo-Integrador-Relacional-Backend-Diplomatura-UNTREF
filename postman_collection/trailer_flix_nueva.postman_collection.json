@@ -1,0 +1,377 @@
+{
+	"info": {
+		"_postman_id": "9a14e2ad-3d76-4b36-a119-d4c251b8af42",
+		"name": "trailer_flix_nueva",
+		"description": "API restfull para hacer consultas a plataforma con base de datos SQL de peliculas y series",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36285838"
+	},
+	"item": [
+		{
+			"name": "categoria",
+			"item": [
+				{
+					"name": "modificar categoria",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "AGREGAR UNA CATEGORIA",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "OBTENER CATEGORIA POR ID",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "lista de categorias",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "borrar categoria",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "actor",
+			"item": [
+				{
+					"name": "crear un actor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Maria\",\r\n    \"apellido\": \"Capaz\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/actor/agregar-actor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"actor",
+								"agregar-actor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear varios actores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "GET http://localhost:3000/actor/1",
+							"protocol": "GET http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"actor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar actor por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/actor/163",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"actor",
+								"163"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar todos los actores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/actor/listar-actores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"actor",
+								"listar-actores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modificar actor por ID",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "borrar actor",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "contenido",
+			"item": [
+				{
+					"name": "agregar contenidoS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"titulo\": \"The Mandalorian\",\r\n        \"resumen\": \"Ambientada tras la caída del Imperio y antes de la aparición de la Primera Orden, la Serie sigue los pasos de un pistolero solitario en las aventuras que protagoniza en los confines de la galaxia, donde no alcanza la autoridad de la Nueva República.\",\r\n        \"busqueda\": \"The Mandalorian, Sci-Fi, Fantasía, Suspenso, Pedro Pascal, Carl Weathers, Misty Rosas, Chris Bartlett, Rio Hackford, Giancarlo Esposito\",\r\n        \"trailer\": \"https://www.youtube.com/embed/aOC8E8z_ifw\",\r\n        \"categoria_id\": \"1\",\r\n        \"temporadas\": \"2\",\r\n        \"gen_id\": \"3\"\r\n    },\r\n    {\r\n        \"titulo\": \"The Umbrella Academy\",\r\n        \"resumen\": \"La muerte de su padre reúne a unos hermanos distanciados y con extraordinarios poderes que descubren impactantes secretos y una amenaza que se cierne sobre la humanidad.\",\r\n        \"busqueda\": \"The Umbrella Academy, Sci-Fi, Fantasía, Drama, Tom Hopper, David Castañeda, Emmy Raver-Lampman, Robert Sheehan, Aidan Gallagher, Elliot Page\",\r\n        \"trailer\": \"https://www.youtube.com/embed/KHucKOK-Vik\",\r\n        \"categoria_id\": \"1\",\r\n        \"temporadas\": \"1\",\r\n        \"gen_id\": \"4\"\r\n    },\r\n    {\r\n        \"titulo\": \"Gambito de Dama\",\r\n        \"resumen\": \"En los cincuenta, una joven de un orfanato descubre que tiene un increíble don para el ajedrez y recorre el arduo camino a la fama mientras lucha contra las adicciones.\",\r\n        \"busqueda\": \"Gambito de Dama, Drama, Ficción, Sucesos, Anya Taylor-Joy, Thomas Brodie-Sangster, Harry Melling, Moses Ingram, Chloe Pirrie, Janina Elkin\",\r\n        \"trailer\": \"https://www.youtube.com/embed/lbleRbyGKL4\",\r\n        \"categoria_id\": \"1\",\r\n        \"temporadas\": \"1\",\r\n        \"gen_id\": \"4\"\r\n    },\r\n    {\r\n        \"titulo\": \"Riverdale\",\r\n        \"resumen\": \"El paso a la edad adulta incluye sexo, romance, escuela y familia. Para Archie y sus amigos, también hay misterios oscuros.\",\r\n        \"busqueda\": \"Riverdale, Drama, Misterio, Ficción, Lili Reinhart, Casey Cott, Camila Mendes, Marisol Nichols, Madelaine Petsch, Mädchen Amick\",\r\n        \"trailer\": \"https://www.youtube.com/embed/HxtLlByaYTc\",\r\n        \"categoria_id\": \"1\",\r\n        \"temporadas\": \"5\",\r\n        \"gen_id\": \"4\"\r\n    },\r\n    {\r\n        \"titulo\": \"The Crown\",\r\n        \"resumen\": \"Este drama narra las rivalidades políticas y el romance de la reina Isabel II, así como los sucesos que moldearon la segunda mitad del siglo XX.\",\r\n        \"busqueda\": \"The Crown, Drama, Suceso Real, Claire Fox, Olivia Colman, Matt Smith, Tobias Menzies, Vanesa Kirby, Helena Bonham Carter\",\r\n        \"trailer\": \"https://www.youtube.com/embed/JWtnJjn6ng0\",\r\n        \"categoria_id\": \"1\",\r\n        \"temporadas\": \"4\",\r\n        \"gen_id\": \"6\"\r\n    },\r\n    {\r\n        \"titulo\": \"Enola Holmes\",\r\n        \"resumen\": \"La hermana menor de Sherlock, descubre que su madre ha desaparecido y se dispone a encontrarla.\",\r\n        \"busqueda\": \"Enola Holmes, Ficción, Drama, Misterio, Millie Bobby Brown, Henry Cavill, Sam Claflin, Helena Bonham Carter, Louis Partridge, Adeel Akhtar\",\r\n        \"trailer\": \"https://www.youtube.com/embed/3t1g2pa355k\",\r\n        \"categoria_id\": \"2\",\r\n        \"duracion\": \"97\",\r\n        \"gen_id\": \"4\"\r\n    },\r\n    {\r\n        \"titulo\": \"Guasón\",\r\n        \"resumen\": \"Arthur Fleck es un hombre ignorado por la sociedad, cuya motivación en la vida es hacer reír. Pero una serie de trágicos acontecimientos le llevarán a ver el mundo de otra forma.\",\r\n        \"busqueda\": \"Guasón, The Joker, Crimen, Suspenso, Drama, DC Comics, Joaquin Phoenix, Robert De Niro, Zazie Beetz, Frances Conroy, Brett Cullen, Shea Whigham\",\r\n        \"trailer\": \"https://www.youtube.com/embed/zAGVQLHvwOY\",\r\n        \"categoria_id\": \"2\",\r\n        \"duracion\": \"97\",\r\n        \"gen_id\": \"7\"\r\n    },\r\n    {\r\n        \"titulo\": \"Avengers: End Game\",\r\n        \"resumen\": \"Después de los devastadores eventos de los Vengadores: Infinity War, el universo está en ruinas. Los Vengadores se reúnen una vez más para revertir las acciones de Thanos.\",\r\n        \"busqueda\": \"Vengadores, Los vengadores, Marvel, The Avengers: End Game, Aventura, Sci-Fi, Acción, Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth, Scarlett Johansson, Jeremy Renner\",\r\n        \"trailer\": \"https://www.youtube.com/embed/TcMBFSGVi1c\",\r\n        \"categoria_id\": \"2\",\r\n        \"duracion\": \"97\",\r\n        \"gen_id\": \"3\"\r\n    },\r\n    {\r\n        \"titulo\": \"Juego de tronos\",\r\n        \"resumen\": \"En un mundo fantástico y en un contexto medieval, varias familias se disputan el poder para dominar el territorio ficticio de Poniente y tomar el control de los Siete Reinos.\",\r\n        \"busqueda\": \"Juego de tronos, Game of Thrones, Aventura, Fantasía, Drama, Emilia Clarke, Lena Headey, Sophie Turner, Kit Harington, Peter Dinklage, Nikolaj Coster-Waldau\",\r\n        \"trailer\": \"https://www.youtube.com/embed/KPLWWIOCOOQ\",\r\n        \"categoria_id\": \"1\",\r\n        \"temporadas\": \"8\",\r\n        \"gen_id\": \"5\"\r\n    },\r\n    {\r\n        \"titulo\": \"The Flash\",\r\n        \"resumen\": \"Sigue las veloces aventuras de Barry Allen, un joven con el deseo de ayudar a los demás que se encuentra cargado de un increíble poder para moverse a increíbles velocidades.\",\r\n        \"busqueda\": \"The Flash, DC Comics, Sci-Fi, Fantasía, Acción, Grant Gustin, Carlos Valdes, Danielle Panabaker, Candice Patton, Jesse L. Martin, Tom Cavanagh\",\r\n        \"trailer\": \"https://www.youtube.com/embed/Yj0l7iGKh8g\",\r\n        \"categoria_id\": \"1\",\r\n        \"temporadas\": \"6\",\r\n        \"duracion\": \" \",\r\n        \"gen_id\": \"3\"\r\n    },\r\n    {\r\n        \"titulo\": \"The Big Bang Theory\",\r\n        \"resumen\": \"Leonard y Sheldon son dos físicos que comparten trabajo y apartamento, enfrentándose a situaciones cómicas con su nueva vecina Penny.\",\r\n        \"busqueda\": \"The Big Bang Theory, La teoría del Big Bang, Comedia, Fantasía, Ficción, Jim Parsons, Johnny Galecki, Kaley Cuoco, Simon Helberg, Kunal Nayyar, Melissa Rauch, Mayim Bialik\",\r\n        \"trailer\": \"https://www.youtube.com/embed/WBb3fojgW0Q\",\r\n        \"categoria_id\": \"1\",\r\n        \"temporadas\": \"12\",\r\n        \"gen_id\": \"9\"\r\n    },\r\n    {\r\n        \"titulo\": \"Friends\",\r\n        \"resumen\": \"'Friends' narra las aventuras y desventuras de seis jóvenes de Nueva York que forman una unida pandilla de amigos que viven en Manhattan.\",\r\n        \"busqueda\": \"Friends, Amigos, Comedia, Familia, Drama, Sitcom, Jennifer Aniston, Courteney Cox, Lisa Kudrow, David Schwimmer, Matthew Perry, Matt LeBlanc\",\r\n        \"trailer\": \"https://www.youtube.com/embed/ekYGfU0XIx0\",\r\n        \"categoria_id\": \"1\",\r\n        \"temporadas\": \"10\",\r\n        \"gen_id\": \"9\"\r\n    },\r\n    {\r\n        \"titulo\": \"Anne with an 'E'\",\r\n        \"resumen\": \"Anne Shirley es una niña huérfana que vive en un pequeño pueblo y transforma su vida gracias a su fuerte personalidad, intelecto e imaginación.\",\r\n        \"busqueda\": \"Anne with an 'E', Drama, Familia, Western, Amybeth McNulty, Geraldine James, R. H. Thomson, Corrine Koslo, Dalila Bela, Lucas Jade Zumann\",\r\n        \"trailer\": \"https://www.youtube.com/embed/M4T-_aB8smU\",\r\n        \"categoria_id\": \"1\",\r\n        \"temporadas\": \"3\",\r\n        \"gen_id\": \"4\"\r\n    },\r\n    {\r\n        \"titulo\": \"The Good Place\",\r\n        \"resumen\": \"Tras su muerte, Eleanor Shellstrop descubre que está en el 'Buen Lugar', un paraíso que resulta no ser tan perfecto como ella creía.\",\r\n        \"busqueda\": \"The Good Place, Comedia, Fantasía, Ficción, Kristen Bell, Ted Danson, William Jackson Harper, Jameela Jamil, D'Arcy Carden, Manny Jacinto\",\r\n        \"trailer\": \"https://www.youtube.com/embed/bYzgr1u2x8I\",\r\n        \"categoria_id\": \"1\",\r\n        \"temporadas\": \"4\",\r\n        \"gen_id\": \"9\"\r\n    },\r\n    {\r\n        \"titulo\": \"Breaking Bad\",\r\n        \"resumen\": \"Walter White es un profesor de química que se convierte en un fabricante de metanfetaminas tras ser diagnosticado con cáncer.\",\r\n        \"busqueda\": \"Breaking Bad, Drama, Crimen, Acción, Bryan Cranston, Aaron Paul, Anna Gunn, Dean Norris, Betsy Brandt, RJ Mitte\",\r\n        \"trailer\": \"https://www.youtube.com/embed/HhesaQXLuRY\",\r\n        \"categoria_id\": \"1\",\r\n        \"temporadas\": \"5\",\r\n        \"gen_id\": \"4\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/contenido/agregar-contenidos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"contenido",
+								"agregar-contenidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar contenidos",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "obtener contenido por ID",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "modificar contenido por ID",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "borrar contenido",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "agregar un contenido",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"Gambito de Dama\",\r\n    \"resumen\": \"En los cincuenta, una joven de un orfanato descubre que tiene un increíble don para el ajedrez y recorre el arduo camino a la fama mientras lucha contra las adicciones.\",\r\n    \"busqueda\": \"Gambito de Dama, Drama, Ficción, Sucesos, Anya Taylor-Joy, Thomas Brodie-Sangster, Harry Melling, Moses Ingram, Chloe Pirrie, Janina Elkin\",\r\n    \"trailer\": \"https://www.youtube.com/embed/lbleRbyGKL4\",\r\n    \"categoria_id\": 1,\r\n    \"temporadas\": 1,\r\n    \"duracion\": null,\r\n    \"gen_id\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/contenido/agregar-contenido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"contenido",
+								"agregar-contenido"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GEN",
+			"item": [
+				{
+					"name": "crear gen",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "listar los gen",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "modificar un gen por ID",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener un gen por ID",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "borrar gen",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "genero",
+			"item": [
+				{
+					"name": "CREAR GENERO",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "obtener un genero por ID",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "listar los generos",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "modificar genero",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "poster",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "actor_contenido",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -5,7 +5,7 @@ const swaggerOptions = {
     definition: {
         openapi: '3.0.0',
         info: {
-            title: 'API de trailer_flix_nueva',
+            title: 'API TrailerFlix',
             version: '1.0.0',
             description: 'Documentación generada con Swagger para la API de plataforma streaming',
         },

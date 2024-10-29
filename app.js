@@ -11,7 +11,7 @@ const actor_contenidoRoutes = require('./routes/actor_contenidoRoutes');
 const { sequelize } = require('./conexion/connection');
 require('dotenv').config();
 require('./models/associations');
-const { swaggerUi, swaggerDocs } = require('./swaggerConfig')
+const { swaggerUi, swaggerDocs } = require('./swagger/swaggerConfig')
 
 app.use(express.json());
 
