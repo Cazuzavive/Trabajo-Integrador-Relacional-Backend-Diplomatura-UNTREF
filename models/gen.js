@@ -19,5 +19,6 @@ const Gen = sequelize.define('Gen', {
     tableName: 'gen',
     timestamps: false
 });
-
+// Relación de uno a muchos
+//Gen.hasMany(Contenido, { foreignKey: 'gen_id', as: 'contenidos' });
 module.exports = Gen;

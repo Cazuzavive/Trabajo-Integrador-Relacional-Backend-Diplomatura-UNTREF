@@ -8,6 +8,7 @@ const genRoutes = require('./routes/genRoutes');
 const generoRoutes = require('./routes/generoRoutes');
 const posterRoutes = require('./routes/posterRoutes');
 const actor_contenidoRoutes = require('./routes/actor_contenidoRoutes');
+const genero_contenidoRoutes = require('./routes/genero_contenidoRoutes');
 const { sequelize } = require('./conexion/connection');
 require('dotenv').config();
 require('./models/associations');
@@ -78,16 +79,16 @@ app.use('/contenido', contenidoRoutes);
 //Genero
 app.use('/genero', generoRoutes);
 
-//genero_contenido
-
-//actor_contenido
-
 //Posters
 app.use('/poster', posterRoutes);
 
 //Actor_Contenido
-app.use('/actor_contenido', actor_contenidoRoutes);
+app.use('/actor-contenido', actor_contenidoRoutes);
 
+//Genero_Contenido
+app.use('/genero-contenido', genero_contenidoRoutes);
+
+//Bienvenidos a TrailerFlix
 app.get('/', (req, res) => {
   res.send('Bienvenidos a trailer_flix_nueva !')
 })

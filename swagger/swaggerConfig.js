@@ -174,6 +174,22 @@ const swaggerOptions = {
                     },
                     required: ['poster_id', 'image', 'contenido_id'],
                 },
+                GeneroContenido: {
+                    type: 'object',
+                    properties: {
+                        genero_id: {
+                            type: 'integer',
+                            description: 'ID del actor',
+                            example: 1,
+                        },
+                        contenido_id: {
+                            type: 'integer',
+                            description: 'ID del contenido',
+                            example: 1,
+                        },
+                    },
+                    required: ['genero_id', 'contenido_id'],
+                },
             },
         },
     },

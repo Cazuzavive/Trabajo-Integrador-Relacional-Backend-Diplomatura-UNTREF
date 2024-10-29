@@ -80,7 +80,8 @@ const Contenido = sequelize.define('Contenido', {
 });
 
 // Relaciones
-Contenido.belongsTo(Categoria);
-Contenido.belongsTo(Gen);
+Contenido.belongsTo(Categoria, { foreignKey: 'categoria_id', as: 'categoria' });
+Contenido.belongsTo(Gen, { foreignKey: 'gen_id', as: 'gen' });
+
 
 module.exports = Contenido;

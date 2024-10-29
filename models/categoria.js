@@ -19,5 +19,6 @@ const Categoria = sequelize.define('Categoria', {
     tableName: 'categoria',
     timestamps: false
 });
-
+// Relación de uno a muchos
+//Categoria.hasMany(Contenido, { foreignKey: 'categoria_id', as: 'contenidos' });
 module.exports = Categoria;
