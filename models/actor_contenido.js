@@ -7,14 +7,14 @@ const ActorContenido = sequelize.define('ActorContenido', {
     actor_id: {
         type: DataTypes.INTEGER,
         references: {
-            model: 'actor',
+            model: Actor,
             key: 'actor_id'
         }
     },
     contenido_id: {
         type: DataTypes.INTEGER,
         references: {
-            model: 'contenido',
+            model: Contenido,
             key: 'contenido_id'
         }
     }
@@ -27,4 +27,4 @@ const ActorContenido = sequelize.define('ActorContenido', {
 Actor.belongsToMany(Contenido, { through: ActorContenido, foreignKey: 'actor_id' })
 Contenido.belongsToMany(Actor, { through: ActorContenido, foreignKey: 'contenido_id' })
 
-module.exports = ActorContenido
+module.exports = ActorContenido;
